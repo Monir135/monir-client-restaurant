@@ -91,6 +91,25 @@ button {
 
 
 
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 4px; /* smaller gap */
+    padding: 8px 0;
+  }
+
+  .brand .logo {
+    font-size: 1.5rem; /* smaller font */
+  }
+
+  .brand .sub {
+    font-size: 0.7rem; /* smaller font */
+  }
+}
+
+
+
+
 
 
 
