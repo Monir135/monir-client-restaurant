@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noiré Gourmet — Luxury Dining</title>
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Noiré Gourmet — Luxury Dining Experience">
+  <meta name="description"
+    content="Portfolio demo project by freelance web developer Moniruzzaman Barbhuiya. Concept luxury restaurant website with online reservation system.">
+
+  <meta name="keywords"
+    content="Luxury restaurant, fine dining, gourmet food, restaurant reservation, premium dining experience">
+  <meta name="author" content="Moniruzzaman Barbhuiya">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://monir-clients-restaurant.vercel.app/">
+  <meta name="theme-color" content="#000000">
+
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://monir-clients-restaurant.vercel.app/">
+  <meta property="og:title" content="Noiré Gourmet — Luxury Dining Experience">
+  <meta property="og:description"
+    content="A luxury restaurant website featuring online reservations, WhatsApp booking, QR confirmation, and elegant UI design.">
+  <meta property="og:image" content="https://monir-clients-restaurant.vercel.app/src/images/preview-res.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="restaurant.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">Noiré Gourmet</div>
+        <div class="sub">Luxury Dining Experience</div>
+      </div>
+      <nav class="nav">
+        <a href="#menu">Menu</a>
+        <a href="#chefs">Chefs</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+        <a href="#reservation" class="btn-ghost">Reserve</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-image"></div>
+
+      <div class="hero-overlay container">
+        <div class="hero-text">
+          <h1>Experience <span class="highlight">Luxury</span> Dining</h1>
+          <p>Indulge in Jakarta’s finest culinary masterpieces.</p>
+          <div class="hero-buttons">
+            <a href="#reservation" class="btn-primary">Reserve Table</a>
+            <a href="https://wa.me/918822030323?text=Hello%20Noir%C3%A9%20Gourmet%2C%20I%20would%20like%20to%20make%20a%20reservation."
+              target="_blank" class="btn-gold">
+              WhatsApp
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- RESERVATION -->
+    <section id="reservation" class="reservation-section">
+
+      <!-- CONTENT -->
+      <div class="section">
+        <div class="container">
+          <h2>Book Your Table</h2>
+
+          <div class="reservation-wrapper">
+            <div class="reservation-card glass">
+
+              <!-- Confirmation Box -->
+              <div id="confirmationBox" style="display:none;"></div>
+
+              <!-- Reservation Form -->
+              <form id="reservationForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="08036011-9e72-4aac-a92c-37c06349ab21">
+                <input type="hidden" name="subject" value="New Restaurant Booking">
+                <input type="hidden" name="redirect" value="false">
+                <input type="hidden" name="booking_ref" id="bookingRef">
+
+                <label>
+                  Name
+                  <input type="text" name="name" required>
+                </label>
+
+                <label>
+                  Phone / WhatsApp
+                  <input type="tel" name="phone" required>
+                </label>
+
+                <label>
+                  Guests
+                  <input type="number" name="guests" min="1" max="20" required>
+                </label>
+
+                <div class="row">
+                  <label class="half">
+                    Date
+                    <input type="date" name="date" required>
+                  </label>
+                  <label class="half">
+                    Time
+                    <input type="time" name="time" required>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn-primary confirm-btn">
+                  Confirm Booking
+                </button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FULL WIDTH DINING IMAGE -->
+      <div class="reservation-hero">
+        <img src="images/dining2.jpg" alt="Luxury Dining Experience" loading="lazy">
+      </div>
+    </section>
+
+
+
+    <!-- MENU -->
+    <section id="menu" class="section menu">
+      <div class="container">
+        <h2>Signature Menu</h2>
+
+        <!-- FILTER BUTTONS -->
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="starter">Starters</button>
+          <button class="filter-btn" data-filter="main">Mains</button>
+          <button class="filter-btn" data-filter="dessert">Desserts</button>
+        </div>
+
+        <div class="grid menu-grid">
+          <div class="menu-card glass starter">
+            <img src="images/bruschetta1.jpg" alt="Bruschetta" loading="lazy">
+            <h3>Bruschetta</h3>
+            <p>Fresh tomato & basil on toasted bread</p>
+          </div>
+          <div class="menu-card glass main">
+            <img src="images/beef.jpg" alt="Beef Wellington" loading="lazy">
+            <h3>Beef Wellington</h3>
+            <p>Classic beef fillet wrapped in puff pastry</p>
+          </div>
+          <div class="menu-card glass dessert">
+            <img src="images/brulee.jpg" alt="Crème Brûlée" loading="lazy">
+            <h3>Crème Brûlée</h3>
+            <p>Caramelized top with creamy custard</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHEFS -->
+    <section id="chefs" class="section chefs">
+      <div class="container">
+        <h2>Our Master Chefs</h2>
+        <div class="grid team-grid">
+          <div class="team-card glass">
+            <img src="images/chefjohn.jpg" alt="Chef John" loading="lazy">
+            <h3>John Smith</h3>
+            <p>Executive Chef & Culinary Visionary</p>
+          </div>
+          <div class="team-card glass">
+            <img src="images/chefdaniel.jpg" alt="Chef Daniel" loading="lazy">
+            <h3>Daniel Zaid</h3>
+            <p>Pastry Chef Extraordinaire</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="grid gallery-grid">
+          <img src="images/starter3.jpg" alt="Dish 1" loading="lazy">
+          <img src="images/maincourse.jpg" alt="Dish 2" loading="lazy">
+          <img src="images/desserts.jpg" alt="Dish 3" loading="lazy">
+          <img src="images/extra.jpg" alt="Dish 4" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section location">
+      <div class="container">
+        <h2>Find Us</h2>
+        <div class="location-wrapper glass">
+          <iframe class="location-map" src="https://www.google.com/maps?q=Jakarta+Restaurant&output=embed"
+            loading="lazy"></iframe>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Jakarta+Restaurant" target="_blank"
+            class="btn-primary location-btn">Get Directions</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Noiré Gourmet — Demo website by Moniruzzaman</div>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="restaurant.js"></script>
+</body>
+
+</html>
