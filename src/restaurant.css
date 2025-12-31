@@ -117,7 +117,7 @@ button {
   .nav {
   flex-wrap: nowrap;       /* keep all links on one line */
   overflow-x: auto;        /* allow horizontal scrolling if needed */
-  gap: 8px;                /* slightly smaller gap */
+  gap: 9px;                /* slightly smaller gap */
 }
 
 .nav a {
