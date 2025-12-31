@@ -81,6 +81,19 @@ button {
   flex-direction: column;
 }
 
+
+@media (max-width: 768px) {
+  .brand {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
 .brand .logo {
   font-family: 'Playfair Display', serif;
   font-size: 1.75rem;
@@ -551,3 +564,4 @@ button {
   text-align: center;
   width: 100%;
 }
+
