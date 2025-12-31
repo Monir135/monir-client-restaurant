@@ -108,8 +108,30 @@ button {
 }
 
 
+@media (max-width: 480px) {
+  .nav a.btn-ghost {
+    padding: 6px 10px;
+  }
 
 
+  .nav {
+  flex-wrap: nowrap;       /* keep all links on one line */
+  overflow-x: auto;        /* allow horizontal scrolling if needed */
+  gap: 8px;                /* slightly smaller gap */
+}
+
+.nav a {
+  white-space: nowrap;     /* prevent line breaks inside links/buttons */
+  flex-shrink: 0;          /* prevent shrinking too small */
+  font-size: 0.85rem;      /* optional: smaller text for mobile */
+}
+
+/* optional: hide scrollbar for cleaner look */
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+}
 
 
 
