@@ -21,6 +21,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
@@ -167,13 +173,49 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ================= HERO ================= */
+/* ================= HERO ================= 
 .hero {
   position: relative;
   min-height: 72vh;
   max-height: 820px;
   overflow: hidden;
 }
+*/
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;     /* ✅ matches 2400 × 1600 */
+  max-height: 90vh;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+@media (max-width: 1440px) {
+  .hero {
+    aspect-ratio: 16 / 11; /* ~1.45 – slight crop, still safe */
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    aspect-ratio: 4 / 3;  /* ~1.33 – balanced, readable text */
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: 3 / 4;  /* taller hero for mobile focus */
+    min-height: 420px;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    aspect-ratio: 4 / 5;   /* even taller */
+    min-height: 380px;
+  }
+}
+
+
+
 
 .hero-image {
   position: absolute;
